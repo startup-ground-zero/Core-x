@@ -680,6 +680,8 @@ body .navbar.scrolled + .lang-toggle .lang-btn {
 }
 
 .service-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
     background: var(--color-white);
     border-radius: 2px;
     overflow: hidden;
@@ -694,7 +696,8 @@ body .navbar.scrolled + .lang-toggle .lang-btn {
 
 .service-image {
     position: relative;
-    height: 220px;
+    height: 100%;
+    min-height: 200px;
     overflow: hidden;
 }
 
@@ -716,7 +719,10 @@ body .navbar.scrolled + .lang-toggle .lang-btn {
 }
 
 .service-content {
-    padding: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .service-icon {
@@ -941,7 +947,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn {
 .cta {
     position: relative;
     padding: 8rem 0;
-    background: url('insta2.jpg') center/cover no-repeat fixed;
+    background: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1920&q=80') center/cover no-repeat fixed;
 }
 
 .cta-overlay {
@@ -1398,6 +1404,15 @@ body .navbar.scrolled + .lang-toggle .lang-btn {
         grid-template-columns: 1fr;
         max-width: 500px;
         margin: 0 auto;
+    }
+
+    .service-card {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        min-height: 180px;
+        height: 180px;
     }
 
     .about-grid {
