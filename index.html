@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORE X — Pilates. Movement. Fitness. | Athens, Greece</title>
+    <meta name="description" content="CORE X is a premium Pilates and fitness studio in Athens, Greece. Reformer Pilates, strength training, and cardio in a modern two-floor facility.">
+    <meta name="keywords" content="Pilates Athens, Reformer Pilates, fitness studio Athens, strength training Greece, CORE X">
+    <meta name="author" content="CORE X">
+    <link rel="canonical" href="https://corex.ath/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CORE X — Pilates. Movement. Fitness.">
+    <meta property="og:description" content="Premium Pilates and fitness studio in Athens, Greece. Reformer, strength training, and cardio.">
+    <meta property="og:image" content="https://corex.ath/insta1.jpg">
+    <meta property="og:url" content="https://corex.ath/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="el_GR">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HealthClub",
+        "name": "CORE X",
+        "description": "Premium Pilates and fitness studio in Athens, Greece.",
+        "url": "https://corex.ath",
+        "telephone": "+30210XXXXXXX",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Κωστή Παλαμά 23",
+            "addressLocality": "Athens",
+            "postalCode": "11141",
+            "addressCountry": "GR"
+        },
+        "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "21:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00"}
+        ],
+        "image": "https://corex.ath/insta1.jpg",
+        "sameAs": ["https://instagram.com/corex.ath"]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">CORE–X</div>
+            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle" id="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="el">ΕΛ</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-circle">
+                    <span class="logo-text">CORE–X</span>
+                    <span class="logo-subtitle">Pilates. Movement. Fitness.</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link" data-en="Home" data-el="Αρχική">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-el="Σχετικά">About</a></li>
+                <li><a href="#services" class="nav-link" data-en="Services" data-el="Υπηρεσίες">Services</a></li>
+                <li><a href="#studio" class="nav-link" data-en="Our Studio" data-el="Χώρος">Our Studio</a></li>
+                <li><a href="#schedule" class="nav-link" data-en="Schedule" data-el="Πρόγραμμα">Schedule</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-el="Επικοινωνία">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta" data-en="Book a Class" data-el="Κράτηση">Book a Class</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Slideshow -->
+    <section class="hero" id="home">
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('insta1.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('insta2.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-pretext" data-en="Welcome to" data-el="Καλωσήρθατε στο">Welcome to</span>
+            <h1 class="hero-title">CORE X</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-tagline" data-en="Pilates • Movement • Fitness" data-el="Pilates • Κίνηση • Ευεξία">Pilates • Movement • Fitness</p>
+            <div class="hero-services">
+                <div class="hero-service">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="20" width="40" height="4" rx="1"/><rect x="8" y="16" width="4" height="12" rx="1"/><rect x="36" y="16" width="4" height="12" rx="1"/></svg>
+                    <span data-en="Reformer" data-el="Reformer">Reformer</span>
+                </div>
+                <div class="hero-service">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="20" width="10" height="8" rx="2"/><rect x="36" y="20" width="10" height="8" rx="2"/><rect x="12" y="22" width="24" height="4" rx="1"/></svg>
+                    <span data-en="Strength" data-el="Δύναμη">Strength</span>
+                </div>
+                <div class="hero-service">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 8C17.4 8 12 13.4 12 20c0 4.8 2.8 8.9 6.9 10.8L18 38h12l-.9-7.2C33.2 28.9 36 24.8 36 20c0-6.6-5.4-12-12-12z"/></svg>
+                    <span data-en="Cardio" data-el="Cardio">Cardio</span>
+                </div>
+            </div>
+            <a href="#contact" class="hero-btn" data-en="Book Your Session" data-el="Κλείσε Μάθημα">Book Your Session</a>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-label" data-en="About Us" data-el="Σχετικά με εμάς">About Us</span>
+                    <h2 class="section-title" data-en="Where Strength Meets Balance" data-el="Όπου η Δύναμη Συναντά την Ισορροπία">Where Strength<br>Meets Balance</h2>
+                    <p class="about-text" data-en="At CORE X, we believe in purposeful movement. Our studio combines the precision of Pilates with the power of strength training and the energy of cardio to create a holistic fitness experience that transforms your body and mind." data-el="Στο CORE X, πιστεύουμε στη σκόπιμη κίνηση. Το στούντιο μας συνδυάζει την ακρίβεια του Pilates με τη δύναμη της μυϊκής ενδυνάμωσης και την ενέργεια του cardio για μια ολιστική εμπειρία γυμναστικής.">
+                        At CORE X, we believe in purposeful movement. Our studio combines the precision of Pilates 
+                        with the power of strength training and the energy of cardio to create a holistic fitness experience 
+                        that transforms your body and mind.
+                    </p>
+                    <p class="about-text" data-en="Located in the heart of Athens, our state-of-the-art facility features premium Pilates reformers, dedicated strength training equipment, and a modern cardio zone — all designed to help you achieve your fitness goals in an inspiring environment." data-el="Στην καρδιά της Αθήνας, ο χώρος μας διαθέτει κορυφαία reformers Pilates, εξοπλισμό ενδυνάμωσης και σύγχρονη ζώνη cardio — όλα σχεδιασμένα για να σας βοηθήσουν να πετύχετε τους στόχους σας.">
+                        Located in the heart of Athens, our state-of-the-art facility features premium Pilates reformers, 
+                        dedicated strength training equipment, and a modern cardio zone — all designed to help you achieve 
+                        your fitness goals in an inspiring environment.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number counter" data-target="3">0</span>
+                            <span class="stat-label" data-en="Training Zones" data-el="Ζώνες Άσκησης">Training Zones</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number counter" data-target="15" data-suffix="+">0</span>
+                            <span class="stat-label" data-en="Weekly Classes" data-el="Εβδομαδιαία Μαθήματα">Weekly Classes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number counter" data-target="2">0</span>
+                            <span class="stat-label" data-en="Floors" data-el="Όροφοι">Floors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal">
+                    <img src="insta1.jpg" alt="CORE X Studio Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label" data-en="What We Offer" data-el="Τι Προσφέρουμε">What We Offer</span>
+                <h2 class="section-title" data-en="Our Services" data-el="Υπηρεσίες">Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="insta2.jpg" alt="Pilates Reformer">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="4" y="20" width="40" height="4" rx="1"/>
+                                <rect x="8" y="16" width="4" height="12" rx="1"/>
+                                <rect x="36" y="16" width="4" height="12" rx="1"/>
+                                <line x1="12" y1="22" x2="36" y2="22"/>
+                            </svg>
+                        </div>
+                        <h3 data-en="Pilates Reformer" data-el="Pilates Reformer">Pilates Reformer</h3>
+                        <p class="service-keywords">Strength • Control • Balance</p>
+                        <p data-en="Experience the transformative power of reformer Pilates. Our premium equipment and expert instructors guide you through precise movements that strengthen your core, improve flexibility, and enhance body awareness." data-el="Ζήστε τη μεταμορφωτική δύναμη του Pilates Reformer. Ο κορυφαίος εξοπλισμός και οι έμπειροι εκπαιδευτές μας σας καθοδηγούν σε ακριβείς κινήσεις που ενδυναμώνουν τον κορμό σας.">Experience the transformative power of reformer Pilates. Our premium equipment and expert instructors guide you through precise movements that strengthen your core, improve flexibility, and enhance body awareness.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="insta2.jpg" alt="Strength Training">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="20" width="10" height="8" rx="2"/>
+                                <rect x="36" y="20" width="10" height="8" rx="2"/>
+                                <rect x="12" y="22" width="24" height="4" rx="1"/>
+                                <rect x="6" y="18" width="2" height="12" rx="1"/>
+                                <rect x="40" y="18" width="2" height="12" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3 data-en="Strength Training" data-el="Ενδυνάμωση">Strength Training</h3>
+                        <p class="service-keywords">Power • Focus • Results</p>
+                        <p data-en="Build functional strength with our comprehensive training programs. From free weights to resistance machines, develop power and definition in a focused, supportive environment." data-el="Χτίστε λειτουργική δύναμη με τα ολοκληρωμένα προγράμματα προπόνησής μας. Από ελεύθερα βάρη μέχρι μηχανήματα αντίστασης, αναπτύξτε δύναμη σε ένα υποστηρικτικό περιβάλλον.">Build functional strength with our comprehensive training programs. From free weights to resistance machines, develop power and definition in a focused, supportive environment.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="insta2.jpg" alt="Cardio Zone">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M24 8C17.4 8 12 13.4 12 20c0 4.8 2.8 8.9 6.9 10.8L18 38h12l-.9-7.2C33.2 28.9 36 24.8 36 20c0-6.6-5.4-12-12-12z"/>
+                                <path d="M18 28l3-6 3 4 3-4 3 6"/>
+                            </svg>
+                        </div>
+                        <h3 data-en="Cardio Zone" data-el="Ζώνη Cardio">Cardio Zone</h3>
+                        <p class="service-keywords">Endurance • Energy • Progress</p>
+                        <p data-en="Boost your cardiovascular fitness with our dedicated cardio zone. State-of-the-art treadmills, bikes, and rowing machines help you build endurance and track your progress." data-el="Ενισχύστε την καρδιαγγειακή σας υγεία στη ζώνη cardio μας. Κορυφαίοι διάδρομοι, ποδήλατα και κωπηλατικά μηχανήματα σας βοηθούν να χτίσετε αντοχή.">Boost your cardiovascular fitness with our dedicated cardio zone. State-of-the-art treadmills, bikes, and rowing machines help you build endurance and track your progress.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Gallery Section -->
+    <section class="studio" id="studio">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label" data-en="Our Space" data-el="Ο Χώρος μας">Our Space</span>
+                <h2 class="section-title" data-en="The Studio" data-el="Το Στούντιο">The Studio</h2>
+                <p class="section-subtitle" data-en="A modern two-floor space designed for purposeful movement" data-el="Ένας σύγχρονος χώρος δύο ορόφων σχεδιασμένος για σκόπιμη κίνηση">A modern two-floor space designed for purposeful movement</p>
+            </div>
+            <div class="studio-gallery reveal-grid">
+                <div class="gallery-item gallery-large" data-lightbox="insta1.jpg">
+                    <img src="insta1.jpg" alt="CORE X Main Studio">
+                    <div class="gallery-caption" data-en="Main Studio" data-el="Κεντρικός Χώρος">Main Studio</div>
+                </div>
+                <div class="gallery-item" data-lightbox="insta2.jpg">
+                    <img src="insta2.jpg" alt="Training Zones">
+                    <div class="gallery-caption" data-en="Training Zones" data-el="Ζώνες Άσκησης">Training Zones</div>
+                </div>
+                <div class="gallery-item" data-lightbox="insta1.jpg">
+                    <img src="insta1.jpg" alt="Reformer Area">
+                    <div class="gallery-caption" data-en="Reformer Area" data-el="Χώρος Reformer">Reformer Area</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img class="lightbox-img" src="" alt="Gallery image">
+    </div>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label" data-en="Plan Your Visit" data-el="Προγραμματίστε">Plan Your Visit</span>
+                <h2 class="section-title" data-en="Class Schedule" data-el="Πρόγραμμα Μαθημάτων">Class Schedule</h2>
+            </div>
+            <div class="schedule-table-wrapper reveal">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th data-en="Time" data-el="Ώρα">Time</th>
+                            <th data-en="Monday" data-el="Δευτέρα">Monday</th>
+                            <th data-en="Tuesday" data-el="Τρίτη">Tuesday</th>
+                            <th data-en="Wednesday" data-el="Τετάρτη">Wednesday</th>
+                            <th data-en="Thursday" data-el="Πέμπτη">Thursday</th>
+                            <th data-en="Friday" data-el="Παρασκευή">Friday</th>
+                            <th data-en="Saturday" data-el="Σάββατο">Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-cell">08:00</td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill cardio">Cardio</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">10:00</td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill cardio">Cardio</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">12:00</td>
+                            <td><span class="class-pill cardio">Cardio</span></td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill cardio">Cardio</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">17:00</td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill cardio">Cardio</span></td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill cardio">Cardio</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">19:00</td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td><span class="class-pill strength">Strength</span></td>
+                            <td><span class="class-pill reformer">Reformer</span></td>
+                            <td>—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 data-en="Ready to Transform Your Body?" data-el="Έτοιμοι να Μεταμορφώσετε το Σώμα σας;">Ready to Transform<br>Your Body?</h2>
+                <p data-en="Join CORE X today and discover the power of purposeful movement." data-el="Γίνετε μέλος στο CORE X σήμερα και ανακαλύψτε τη δύναμη της σκόπιμης κίνησης.">Join CORE X today and discover the power of purposeful movement.</p>
+                <a href="#contact" class="btn-primary" data-en="Start Your Journey" data-el="Ξεκινήστε Σήμερα">Start Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label" data-en="Testimonials" data-el="Μαρτυρίες">Testimonials</span>
+                <h2 class="section-title" data-en="What Our Members Say" data-el="Τι Λένε τα Μέλη μας">What Our Members Say</h2>
+            </div>
+            <div class="testimonials-grid reveal">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-en="CORE X completely transformed my approach to fitness. The reformer classes are exceptional and the instructors truly care about your progress." data-el="Το CORE X μεταμόρφωσε τελείως την προσέγγισή μου στη γυμναστική. Τα μαθήματα reformer είναι εξαιρετικά και οι εκπαιδευτές νοιάζονται πραγματικά.">"CORE X completely transformed my approach to fitness. The reformer classes are exceptional and the instructors truly care about your progress."</p>
+                    <span class="testimonial-author">— Maria K.</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-en="The best studio in Athens. Modern equipment, beautiful space, and a welcoming atmosphere. I've been training here for 6 months and the results speak for themselves." data-el="Το καλύτερο στούντιο στην Αθήνα. Σύγχρονος εξοπλισμός, όμορφος χώρος και φιλόξενη ατμόσφαιρα. Προπονούμαι εδώ 6 μήνες και τα αποτελέσματα μιλούν μόνα τους.">"The best studio in Athens. Modern equipment, beautiful space, and a welcoming atmosphere. I've been training here for 6 months and the results speak for themselves."</p>
+                    <span class="testimonial-author">— Nikos P.</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-en="I love the variety — from Pilates to strength to cardio. Every visit feels fresh and challenging. The two-floor setup is impressive." data-el="Λατρεύω την ποικιλία — από Pilates μέχρι δύναμη και cardio. Κάθε επίσκεψη είναι ανανεωτική και γεμάτη πρόκληση. Ο χώρος δύο ορόφων εντυπωσιάζει.">"I love the variety — from Pilates to strength to cardio. Every visit feels fresh and challenging. The two-floor setup is impressive."</p>
+                    <span class="testimonial-author">— Elena S.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-label" data-en="Get in Touch" data-el="Επικοινωνήστε">Get in Touch</span>
+                    <h2 class="section-title" data-en="Contact Us" data-el="Επικοινωνία">Contact Us</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 data-en="Location" data-el="Τοποθεσία">Location</h4>
+                                <p>Κωστή Παλαμά 23<br>Athens, Greece 11141</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 7l-10 7L2 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@corex.ath</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 data-en="Phone" data-el="Τηλέφωνο">Phone</h4>
+                                <p>+30 210 XXX XXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                    <circle cx="12" cy="12" r="5"/>
+                                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p>@corex.ath</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form" id="contact-form">
+                        <!-- Honeypot field for spam protection -->
+                        <div class="form-hp" aria-hidden="true">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-el="Το Όνομά σας" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" data-placeholder-en="Your Email" data-placeholder-el="Το Email σας" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="interest" name="interest" required>
+                                <option value="" disabled selected data-en="I'm interested in..." data-el="Ενδιαφέρομαι για...">I'm interested in...</option>
+                                <option value="reformer">Pilates Reformer</option>
+                                <option value="strength" data-en="Strength Training" data-el="Ενδυνάμωση">Strength Training</option>
+                                <option value="cardio" data-en="Cardio Zone" data-el="Ζώνη Cardio">Cardio Zone</option>
+                                <option value="all" data-en="All Services" data-el="Όλες οι Υπηρεσίες">All Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" data-placeholder-en="Your Message" data-placeholder-el="Το Μήνυμά σας" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">
+                            <span class="btn-text" data-en="Send Message" data-el="Αποστολή">Send Message</span>
+                            <span class="btn-loader" aria-hidden="true"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-circle logo-circle-sm">
+                        <span class="logo-text">CORE–X</span>
+                        <span class="logo-subtitle">Pilates. Movement. Fitness.</span>
+                    </div>
+                    <p class="footer-tagline" data-en="Train with Purpose" data-el="Γυμνάσου με Σκοπό">Train with Purpose</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-el="Σύνδεσμοι">Quick Links</h4>
+                    <ul>
+                        <li><a href="#about" data-en="About" data-el="Σχετικά">About</a></li>
+                        <li><a href="#services" data-en="Services" data-el="Υπηρεσίες">Services</a></li>
+                        <li><a href="#studio" data-en="Studio" data-el="Χώρος">Studio</a></li>
+                        <li><a href="#schedule" data-en="Schedule" data-el="Πρόγραμμα">Schedule</a></li>
+                        <li><a href="#contact" data-en="Contact" data-el="Επικοινωνία">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4 data-en="Opening Hours" data-el="Ωράριο">Opening Hours</h4>
+                    <ul>
+                        <li data-en="Mon — Fri: 07:00 — 21:00" data-el="Δευ — Παρ: 07:00 — 21:00">Mon — Fri: 07:00 — 21:00</li>
+                        <li data-en="Saturday: 08:00 — 14:00" data-el="Σάββατο: 08:00 — 14:00">Saturday: 08:00 — 14:00</li>
+                        <li data-en="Sunday: Closed" data-el="Κυριακή: Κλειστά">Sunday: Closed</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-en="Follow Us" data-el="Ακολουθήστε μας">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/corex.ath" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CORE X. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Bar -->
+    <div class="cookie-bar" id="cookie-bar">
+        <p data-en="We use cookies to enhance your experience. By continuing, you agree to our use of cookies." data-el="Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας. Συνεχίζοντας, συμφωνείτε με τη χρήση cookies.">We use cookies to enhance your experience. By continuing, you agree to our use of cookies.</p>
+        <button class="cookie-accept" id="cookie-accept" data-en="Accept" data-el="Αποδοχή">Accept</button>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
