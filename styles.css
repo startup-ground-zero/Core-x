@@ -1407,12 +1407,12 @@ body .navbar.scrolled + .lang-toggle .lang-btn {
     }
 
     .service-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: 140px 1fr;
     }
 
     .service-image {
         min-height: 180px;
-        height: 180px;
+        height: auto;
     }
 
     .about-grid {
