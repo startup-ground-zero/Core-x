@@ -1553,6 +1553,28 @@ body .navbar.scrolled + .lang-toggle .lang-btn {
         font-size: 2rem;
     }
 
+    .service-card {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .service-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-content p:last-child {
+        font-size: 0.8rem;
+    }
+
+    .service-keywords {
+        font-size: 0.7rem;
+    }
+
+    .service-icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 0.5rem;
+    }
+
     .cookie-bar {
         flex-direction: column;
         text-align: center;
