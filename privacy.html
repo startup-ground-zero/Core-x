@@ -57,62 +57,153 @@
     </style>
 </head>
 <body>
-    <div class="privacy-page">
-        <h1>Privacy Policy</h1>
-        <p><strong>Last updated:</strong> July 13, 2026</p>
-
-        <h2>1. Who We Are</h2>
-        <p>CORE X is a Pilates and fitness studio located at Κωστή Παλαμά 23, Athens 11141, Greece. We are committed to protecting your personal data in accordance with the EU General Data Protection Regulation (GDPR).</p>
-
-        <h2>2. What Data We Collect</h2>
-        <p>When you use our website or contact form, we may collect:</p>
-        <ul>
-            <li>Name</li>
-            <li>Email address</li>
-            <li>Mobile phone number</li>
-            <li>Message content</li>
-            <li>Service interest</li>
-        </ul>
-
-        <h2>3. How We Use Your Data</h2>
-        <p>We use your data solely to:</p>
-        <ul>
-            <li>Respond to your inquiries</li>
-            <li>Schedule classes or sessions you request</li>
-            <li>Improve our website experience</li>
-        </ul>
-
-        <h2>4. Cookies</h2>
-        <p>Our website uses cookies to:</p>
-        <ul>
-            <li>Remember your language preference</li>
-            <li>Store your cookie consent choice</li>
-            <li>Analyze website traffic (Google Analytics)</li>
-        </ul>
-        <p>You can disable cookies in your browser settings at any time.</p>
-
-        <h2>5. Data Sharing</h2>
-        <p>We do not sell, rent, or share your personal data with third parties, except where required by law or with service providers that help us operate our website (e.g., Google Analytics).</p>
-
-        <h2>6. Data Retention</h2>
-        <p>We retain your personal data only for as long as necessary to fulfill the purposes described above, or as required by law.</p>
-
-        <h2>7. Your Rights</h2>
-        <p>Under GDPR, you have the right to:</p>
-        <ul>
-            <li>Access your personal data</li>
-            <li>Correct inaccurate data</li>
-            <li>Request deletion of your data</li>
-            <li>Withdraw consent at any time</li>
-            <li>Lodge a complaint with the Hellenic Data Protection Authority</li>
-        </ul>
-
-        <h2>8. Contact Us</h2>
-        <p>For any privacy-related questions, contact us at:<br>
-        Email: info@corex.ath<br>
-        Address: Κωστή Παλαμά 23, Athens 11141, Greece</p>
-
-        <a href="index.html" class="back-link">← Back to Home</a>
+    <!-- Language Toggle -->
+    <div class="lang-toggle" style="position: fixed; top: 1.5rem; right: 2rem; z-index: 1001; display: flex; align-items: center; gap: 0.5rem;">
+        <button class="lang-btn active" data-lang="en" onclick="switchLang('en')" style="background:none;border:none;font-size:0.7rem;letter-spacing:1px;color:rgba(44,44,44,0.5);cursor:pointer;padding:0.3rem 0.5rem;">EN</button>
+        <span style="color:rgba(44,44,44,0.3);font-size:0.7rem;">|</span>
+        <button class="lang-btn" data-lang="el" onclick="switchLang('el')" style="background:none;border:none;font-size:0.7rem;letter-spacing:1px;color:rgba(44,44,44,0.5);cursor:pointer;padding:0.3rem 0.5rem;">ΕΛ</button>
     </div>
+
+    <div class="privacy-page">
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-el="← Επιστροφή στην Αρχική">← Back to Home</a>
+
+        <!-- English Version -->
+        <div class="lang-content" data-lang="en">
+            <h1>Privacy Policy</h1>
+            <p><strong>Last updated:</strong> July 13, 2026</p>
+
+            <h2>1. Who We Are</h2>
+            <p>CORE X is a Pilates and fitness studio located at Κωστή Παλαμά 23, Athens 11141, Greece. We are committed to protecting your personal data in accordance with the EU General Data Protection Regulation (GDPR).</p>
+
+            <h2>2. What Data We Collect</h2>
+            <p>When you use our website or contact form, we may collect:</p>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Mobile phone number</li>
+                <li>Message content</li>
+                <li>Service interest</li>
+            </ul>
+
+            <h2>3. How We Use Your Data</h2>
+            <p>We use your data solely to:</p>
+            <ul>
+                <li>Respond to your inquiries</li>
+                <li>Schedule classes or sessions you request</li>
+                <li>Improve our website experience</li>
+            </ul>
+
+            <h2>4. Cookies</h2>
+            <p>Our website uses cookies to:</p>
+            <ul>
+                <li>Remember your language preference</li>
+                <li>Store your cookie consent choice</li>
+                <li>Analyze website traffic (Google Analytics)</li>
+            </ul>
+            <p>You can disable cookies in your browser settings at any time.</p>
+
+            <h2>5. Data Sharing</h2>
+            <p>We do not sell, rent, or share your personal data with third parties, except where required by law or with service providers that help us operate our website (e.g., Google Analytics).</p>
+
+            <h2>6. Data Retention</h2>
+            <p>We retain your personal data only for as long as necessary to fulfill the purposes described above, or as required by law.</p>
+
+            <h2>7. Your Rights</h2>
+            <p>Under GDPR, you have the right to:</p>
+            <ul>
+                <li>Access your personal data</li>
+                <li>Correct inaccurate data</li>
+                <li>Request deletion of your data</li>
+                <li>Withdraw consent at any time</li>
+                <li>Lodge a complaint with the Hellenic Data Protection Authority</li>
+            </ul>
+
+            <h2>8. Contact Us</h2>
+            <p>For any privacy-related questions, contact us at:<br>
+            Email: info@corex.ath<br>
+            Address: Κωστή Παλαμά 23, Athens 11141, Greece</p>
+        </div>
+
+        <!-- Greek Version -->
+        <div class="lang-content" data-lang="el" style="display: none;">
+            <h1>Πολιτική Απορρήτου</h1>
+            <p><strong>Τελευταία ενημέρωση:</strong> 13 Ιουλίου 2026</p>
+
+            <h2>1. Ποιοι Είμαστε</h2>
+            <p>Το CORE X είναι ένα στούντιο Pilates και fitness που βρίσκεται στην Κωστή Παλαμά 23, Αθήνα 11141, Ελλάδα. Δεσμευόμαστε να προστατεύουμε τα προσωπικά σας δεδομένα σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR) της ΕΕ.</p>
+
+            <h2>2. Ποια Δεδομένα Συλλέγουμε</h2>
+            <p>Όταν χρησιμοποιείτε τον ιστότοπό μας ή τη φόρμα επικοινωνίας, ενδέχεται να συλλέξουμε:</p>
+            <ul>
+                <li>Όνομα</li>
+                <li>Διεύθυνση email</li>
+                <li>Αριθμό κινητού τηλεφώνου</li>
+                <li>Περιεχόμενο μηνύματος</li>
+                <li>Ενδιαφέρον υπηρεσίας</li>
+            </ul>
+
+            <h2>3. Πώς Χρησιμοποιούμε τα Δεδομένα σας</h2>
+            <p>Χρησιμοποιούμε τα δεδομένα σας αποκλειστικά για:</p>
+            <ul>
+                <li>Να απαντήσουμε στα ερωτήματά σας</li>
+                <li>Να προγραμματίσουμε μαθήματα ή συνεδρίες που ζητάτε</li>
+                <li>Να βελτιώσουμε την εμπειρία του ιστότοπου</li>
+            </ul>
+
+            <h2>4. Cookies</h2>
+            <p>Ο ιστότοπός μας χρησιμοποιεί cookies για:</p>
+            <ul>
+                <li>Να θυμάται τη γλωσσική σας προτίμηση</li>
+                <li>Να αποθηκεύει την επιλογή σας για τα cookies</li>
+                <li>Να αναλύει την επισκεψιμότητα (Google Analytics)</li>
+            </ul>
+            <p>Μπορείτε να απενεργοποιήσετε τα cookies στις ρυθμίσεις του προγράμματος περιήγησής σας ανά πάσα στιγμή.</p>
+
+            <h2>5. Κοινοποίηση Δεδομένων</h2>
+            <p>Δεν πωλούμε, ενοικιάζουμε ή μοιραζόμαστε τα προσωπικά σας δεδομένα με τρίτους, εκτός εάν απαιτείται από τον νόμο ή με παρόχους υπηρεσιών που μας βοηθούν να λειτουργούμε τον ιστότοπό μας (π.χ. Google Analytics).</p>
+
+            <h2>6. Διατήρηση Δεδομένων</h2>
+            <p>Διατηρούμε τα προσωπικά σας δεδομένα μόνο για όσο χρόνο είναι απαραίτητο για την εκπλήρωση των σκοπών που περιγράφονται παραπάνω ή όπως απαιτείται από τον νόμο.</p>
+
+            <h2>7. Τα Δικαιώματά σας</h2>
+            <p>Σύμφωνα με τον GDPR, έχετε το δικαίωμα να:</p>
+            <ul>
+                <li>Αποκτήσετε πρόσβαση στα προσωπικά σας δεδομένα</li>
+                <li>Διορθώσετε ανακριβή δεδομένα</li>
+                <li>Ζητήσετε τη διαγραφή των δεδομένων σας</li>
+                <li>Ανακαλέσετε τη συγκατάθεσή σας ανά πάσα στιγμή</li>
+                <li>Υποβάλετε καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα</li>
+            </ul>
+
+            <h2>8. Επικοινωνία</h2>
+            <p>Για οποιαδήποτε ερώτηση σχετικά με το απόρρητο, επικοινωνήστε μαζί μας:<br>
+            Email: info@corex.ath<br>
+            Διεύθυνση: Κωστή Παλαμά 23, Αθήνα 11141, Ελλάδα</p>
+        </div>
+
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-el="← Επιστροφή στην Αρχική">← Back to Home</a>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+                btn.style.color = btn.dataset.lang === lang ? '#2c2c2c' : 'rgba(44,44,44,0.5)';
+                btn.style.fontWeight = btn.dataset.lang === lang ? '500' : '400';
+            });
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                if (!el.classList.contains('lang-content') && !el.classList.contains('lang-btn')) {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
+            });
+            localStorage.setItem('corex-lang', lang);
+        }
+        // Check saved language
+        const saved = localStorage.getItem('corex-lang');
+        if (saved) switchLang(saved);
+    </script>
 </body>
 </html>
