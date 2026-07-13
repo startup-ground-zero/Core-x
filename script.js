@@ -26,12 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Navbar Scroll Effect ---
     const navbar = document.getElementById('navbar');
+    const langToggle = document.getElementById('lang-toggle');
 
     const handleScroll = () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
+            langToggle.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+            langToggle.classList.remove('scrolled');
         }
     };
     window.addEventListener('scroll', handleScroll);

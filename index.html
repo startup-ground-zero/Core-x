@@ -55,6 +55,7 @@
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
+            <img src="logo_master.png" alt="CORE X Logo" class="preloader-logo-img">
             <div class="preloader-logo">CORE–X</div>
             <div class="preloader-bar"><div class="preloader-progress"></div></div>
         </div>
@@ -71,10 +72,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <div class="logo-circle">
-                    <span class="logo-text">CORE–X</span>
-                    <span class="logo-subtitle">Pilates. Movement. Fitness.</span>
-                </div>
+                <img src="logo_master.png" alt="CORE X Logo" class="nav-logo-img">
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link" data-en="Home" data-el="Αρχική">Home</a></li>
@@ -96,8 +94,14 @@
     <!-- Hero Slideshow -->
     <section class="hero" id="home">
         <div class="hero-slides">
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1717500252297-b09508db7ceb?w=1920&q=80')"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1920&q=80')"></div>
+            <div class="hero-slide active" style="background-image: url('Pilates_beds_1.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('Pilates_beds_close_2.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('Pilates_beds_overview_1.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('strength training.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('Training_Area_1.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('Training_Area_2.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('Training_Area_3.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('weight_lifting_2.jpg')"></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -160,7 +164,7 @@
                     </div>
                 </div>
                 <div class="about-image reveal">
-                    <img src="insta1.jpg" alt="CORE X Studio Interior" loading="lazy">
+                    <img src="Pilates_beds_1.jpg" alt="CORE X Studio Interior" loading="lazy">
                 </div>
             </div>
         </div>
@@ -243,17 +247,25 @@
                 <p class="section-subtitle" data-en="A modern two-floor space designed for purposeful movement" data-el="Ένας σύγχρονος χώρος δύο ορόφων σχεδιασμένος για σκόπιμη κίνηση">A modern two-floor space designed for purposeful movement</p>
             </div>
             <div class="studio-gallery reveal-grid">
-                <div class="gallery-item gallery-large" data-lightbox="insta1.jpg">
-                    <img src="insta1.jpg" alt="CORE X Main Studio" loading="lazy">
+                <div class="gallery-item gallery-large" data-lightbox="Pilates_beds_close_2.jpg">
+                    <img src="Pilates_beds_close_2.jpg" alt="CORE X Pilates Beds" loading="lazy">
                     <div class="gallery-caption" data-en="Main Studio" data-el="Κεντρικός Χώρος">Main Studio</div>
                 </div>
-                <div class="gallery-item" data-lightbox="insta2.jpg">
-                    <img src="insta2.jpg" alt="Training Zones" loading="lazy">
-                    <div class="gallery-caption" data-en="Training Zones" data-el="Ζώνες Άσκησης">Training Zones</div>
+                <div class="gallery-item" data-lightbox="Training_Area_2.jpg">
+                    <img src="Training_Area_2.jpg" alt="Training Area" loading="lazy">
+                    <div class="gallery-caption" data-en="Training Area" data-el="Χώρος Προπόνησης">Training Area</div>
                 </div>
-                <div class="gallery-item" data-lightbox="insta1.jpg">
-                    <img src="insta1.jpg" alt="Reformer Area" loading="lazy">
-                    <div class="gallery-caption" data-en="Reformer Area" data-el="Χώρος Reformer">Reformer Area</div>
+                <div class="gallery-item" data-lightbox="Training_Area_3.jpg">
+                    <img src="Training_Area_3.jpg" alt="Training Area" loading="lazy">
+                    <div class="gallery-caption" data-en="Training Area" data-el="Χώρος Προπόνησης">Training Area</div>
+                </div>
+                <div class="gallery-item" data-lightbox="weight_lifting_2.jpg">
+                    <img src="weight_lifting_2.jpg" alt="Weight Lifting" loading="lazy">
+                    <div class="gallery-caption" data-en="Weight Lifting" data-el="Άρση Βαρών">Weight Lifting</div>
+                </div>
+                <div class="gallery-item" data-lightbox="Pilates_beds_1.jpg">
+                    <img src="Pilates_beds_1.jpg" alt="Pilates Beds" loading="lazy">
+                    <div class="gallery-caption" data-en="Pilates Beds" data-el="Κρεβάτια Pilates">Pilates Beds</div>
                 </div>
             </div>
         </div>
@@ -447,6 +459,9 @@
                             <input type="email" id="email" name="email" placeholder="Your Email" data-placeholder-en="Your Email" data-placeholder-el="Το Email σας" required>
                         </div>
                         <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Mobile Phone" data-placeholder-en="Your Mobile Phone" data-placeholder-el="Το Κινητό σας" required>
+                        </div>
+                        <div class="form-group">
                             <select id="interest" name="interest" required>
                                 <option value="" disabled selected data-en="I'm interested in..." data-el="Ενδιαφέρομαι για...">I'm interested in...</option>
                                 <option value="reformer">Pilates Reformer</option>
@@ -473,10 +488,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo-circle logo-circle-sm">
-                        <span class="logo-text">CORE–X</span>
-                        <span class="logo-subtitle">Pilates. Movement. Fitness.</span>
-                    </div>
+                    <img src="logo_master.png" alt="CORE X Logo" class="footer-logo-img">
                     <p class="footer-tagline" data-en="Train with Purpose" data-el="Γυμνάσου με Σκοπό">Train with Purpose</p>
                 </div>
                 <div class="footer-links">
