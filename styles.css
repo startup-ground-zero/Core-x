@@ -906,6 +906,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 
 .schedule-table-wrapper {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-radius: 2px;
     box-shadow: var(--shadow-sm);
     background: var(--color-white);
@@ -913,6 +914,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 
 .schedule-table {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
     font-size: 0.9rem;
 }
@@ -1290,6 +1292,25 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     color: var(--color-text-light);
 }
 
+.footer-hours .summer-hours {
+    font-size: 0.82rem;
+    color: var(--color-gold);
+}
+
+.footer-phone {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.footer-phone a {
+    color: var(--color-gold-light);
+}
+
+.footer-phone a:hover {
+    color: var(--color-gold);
+}
+
 .social-links {
     display: flex;
     gap: 1rem;
@@ -1425,6 +1446,36 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     width: 20px;
     height: 20px;
     color: var(--color-white);
+}
+
+/* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    background: #1ebe57;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
 }
 
 /* ============================================
@@ -1584,6 +1635,10 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
         font-size: 2rem;
     }
 
+    .cta {
+        background-attachment: scroll;
+    }
+
     .service-card {
         grid-template-columns: 100px 1fr;
     }
@@ -1633,8 +1688,9 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     }
 
     .about-stats {
-        flex-direction: column;
-        gap: 1.5rem;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
     }
 
     .lang-toggle {
