@@ -914,9 +914,14 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 
 .schedule-table {
     width: 100%;
-    min-width: 600px;
     border-collapse: collapse;
     font-size: 0.9rem;
+}
+
+@media (min-width: 769px) {
+    .schedule-table {
+        min-width: 600px;
+    }
 }
 
 .schedule-table th {
