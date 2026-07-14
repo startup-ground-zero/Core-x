@@ -184,8 +184,22 @@ document.addEventListener('DOMContentLoaded', () => {
             if (label) el.setAttribute('aria-label', label);
         });
 
+        updateScheduleLabels(lang);
+
         // Update html lang attribute
         document.documentElement.lang = lang === 'el' ? 'el' : 'en';
+    }
+
+    function updateScheduleLabels(lang) {
+        const table = document.querySelector('.schedule-table');
+        if (!table) return;
+
+        const labels = Array.from(table.querySelectorAll('thead th')).map(th => th.getAttribute('data-' + lang) || th.textContent.trim());
+        table.querySelectorAll('tbody tr').forEach(row => {
+            Array.from(row.children).forEach((cell, index) => {
+                if (labels[index]) cell.setAttribute('data-label', labels[index]);
+            });
+        });
     }
 
     langBtns.forEach(btn => {
@@ -197,6 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply saved language on load
     if (currentLang !== 'en') {
         setLanguage(currentLang);
+    } else {
+        updateScheduleLabels(currentLang);
     }
 
     // --- Smooth Scroll ---
