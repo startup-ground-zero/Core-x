@@ -9,18 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Preloader ---
     const preloader = document.getElementById('preloader');
+    const dismissPreloader = () => {
+        preloader.classList.add('hidden');
+        document.body.classList.remove('no-scroll');
+    };
     window.addEventListener('load', () => {
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-            document.body.classList.remove('no-scroll');
-        }, 2000);
+        setTimeout(dismissPreloader, 600);
     });
     // Fallback if load already fired
     if (document.readyState === 'complete') {
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-            document.body.classList.remove('no-scroll');
-        }, 2000);
+        setTimeout(dismissPreloader, 600);
     }
     document.body.classList.add('no-scroll');
 
@@ -58,8 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Hero Slideshow ---
     const slides = document.querySelectorAll('.hero-slide');
     let currentSlide = 0;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (slides.length > 1) {
+    if (slides.length > 1 && !prefersReducedMotion) {
         setInterval(() => {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
@@ -179,6 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (placeholder) el.placeholder = placeholder;
         });
 
+        // Update accessible labels without replacing icon content
+        document.querySelectorAll('[data-aria-' + lang + ']').forEach(el => {
+            const label = el.getAttribute('data-aria-' + lang);
+            if (label) el.setAttribute('aria-label', label);
+        });
+
         // Update html lang attribute
         document.documentElement.lang = lang === 'el' ? 'el' : 'en';
     }
@@ -257,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cookieAccept.addEventListener('click', () => {
         localStorage.setItem('corex-cookies-accepted', 'true');
         cookieBar.classList.remove('visible');
+        if (typeof loadGA === 'function') loadGA();
     });
 
     // --- Back to Top ---
