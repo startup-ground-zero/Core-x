@@ -904,49 +904,54 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     background: var(--color-cream);
 }
 
-.schedule-table-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 2px;
-    box-shadow: var(--shadow-sm);
-    background: var(--color-white);
+.schedule-days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-.schedule-table {
+.schedule-day-card {
+    background: var(--color-white);
+    border-radius: 4px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(201, 169, 110, 0.12);
+}
+
+.schedule-day-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-gold-light);
+}
+
+.schedule-day-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.9rem;
 }
 
-@media (min-width: 769px) {
-    .schedule-table {
-        min-width: 600px;
-    }
-}
-
-.schedule-table th {
-    padding: 1.2rem 1rem;
+.schedule-day-table td {
+    padding: 0.35rem 0;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--color-charcoal);
     text-align: center;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.08);
+}
+
+.schedule-day-table td:first-child {
+    text-align: left;
     font-weight: 500;
     font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--color-charcoal);
-    border-bottom: 2px solid var(--color-gold-light);
-    background: var(--color-offwhite);
-}
-
-.schedule-table td {
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(201, 169, 110, 0.1);
-    vertical-align: middle;
-}
-
-.time-cell {
-    font-weight: 500;
     color: var(--color-primary-dark);
-    font-size: 0.85rem;
+}
+
+.schedule-day-table tr:last-child td {
+    border-bottom: none;
 }
 
 .class-pill {
@@ -1629,104 +1634,13 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
         overflow-x: hidden;
     }
 
-    .schedule-table-wrapper {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        background: transparent;
-        box-shadow: none;
+    .schedule-days {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    .schedule-table {
-        width: 100%;
-        max-width: 100%;
-        font-size: 0.8rem;
-        min-width: 0;
-    }
-
-    .schedule-table th,
-    .schedule-table td {
-        padding: 0.7rem 0.4rem;
-    }
-
-    .schedule-table,
-    .schedule-table thead,
-    .schedule-table tbody,
-    .schedule-table tr,
-    .schedule-table th,
-    .schedule-table td {
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .schedule-table thead {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        white-space: nowrap;
-    }
-
-    .schedule-table tr {
-        margin-bottom: 1rem;
-        padding: 0.9rem 1rem;
-        overflow: hidden;
-        background: var(--color-white);
-        border: 1px solid rgba(201, 169, 110, 0.16);
-        border-radius: 2px;
-        box-shadow: var(--shadow-sm);
-    }
-
-    .schedule-table td {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-        min-width: 0;
-        padding: 0.55rem 0;
-        text-align: right;
-        border-bottom: 1px solid rgba(201, 169, 110, 0.1);
-    }
-
-    .schedule-table td:last-child {
-        border-bottom: none;
-    }
-
-    .schedule-table td::before {
-        content: attr(data-label);
-        flex: 0 0 auto;
-        margin-right: auto;
-        max-width: 45%;
-        font-size: 0.68rem;
-        font-weight: 500;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        color: var(--color-primary-dark);
-    }
-
-    .schedule-table td > * {
-        min-width: 0;
-    }
-
-    .schedule-table .time-cell {
-        justify-content: center;
-        margin: -0.2rem 0 0.45rem;
-        padding-bottom: 0.8rem;
-        font-size: 1rem;
-        color: var(--color-charcoal);
-        border-bottom-color: rgba(201, 169, 110, 0.28);
-    }
-
-    .schedule-table .time-cell::before {
-        display: none;
-    }
-
-    .class-pill {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.65rem;
+    .schedule-day-card {
+        padding: 1.2rem;
     }
 
     .footer-grid {
