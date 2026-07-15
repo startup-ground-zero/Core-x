@@ -1,0 +1,17 @@
+{
+  "times": ["08:00", "09:00", "10:00", "11:00", "17:00", "18:00", "19:00", "20:00"],
+  "days": {
+    "en": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "el": ["Δευτέρα", "Τρίτη", "Τετάρτη", "Πέμπτη", "Παρασκευή", "Σάββατο"]
+  },
+  "classes": [
+    [["Pilates", "Cross"], "Cross", "Pilates", "Cross", "Cross", "—"],
+    ["—", "Pilates", "Cross", "Pilates", "Pilates", "—"],
+    ["Cross", "Cross", "Pilates", "Cross", "Cross", "Pilates"],
+    ["—", "—", "—", "—", "—", "Cross"],
+    [["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], "—"],
+    [["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], "—"],
+    [["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], "—"],
+    [["Pilates", "Cross"], ["Pilates", "Cross"], "—", ["Pilates", "Cross"], ["Pilates", "Cross"], "—"]
+  ]
+}

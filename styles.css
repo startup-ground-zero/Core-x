@@ -963,19 +963,14 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     transform: scale(1.05);
 }
 
-.class-pill.reformer {
+.class-pill.pilates {
     background: rgba(166, 124, 82, 0.15);
     color: var(--color-primary-dark);
 }
 
-.class-pill.strength {
+.class-pill.cross {
     background: rgba(44, 44, 44, 0.1);
     color: var(--color-charcoal);
-}
-
-.class-pill.cardio {
-    background: rgba(201, 169, 110, 0.2);
-    color: var(--color-primary-dark);
 }
 
 /* ============================================
