@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Scroll Reveal ---
-    const revealElements = document.querySelectorAll('.reveal, .reveal-grid');
+    const revealElements = document.querySelectorAll('.reveal, .reveal-grid, .reveal-stagger');
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -191,14 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateScheduleLabels(lang) {
-        const table = document.querySelector('.schedule-table');
-        if (!table) return;
-
-        const labels = Array.from(table.querySelectorAll('thead th')).map(th => th.getAttribute('data-' + lang) || th.textContent.trim());
-        table.querySelectorAll('tbody tr').forEach(row => {
-            Array.from(row.children).forEach((cell, index) => {
-                if (labels[index]) cell.setAttribute('data-label', labels[index]);
-            });
+        document.querySelectorAll('.schedule-day-title').forEach(title => {
+            const text = title.getAttribute('data-' + lang);
+            if (text) title.textContent = text;
         });
     }
 
