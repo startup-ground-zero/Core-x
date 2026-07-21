@@ -171,7 +171,8 @@ ul {
 }
 
 .cta-content .brand-inline-img,
-.footer-bottom .brand-inline-img {
+.footer-bottom .brand-inline-img,
+.founder .brand-inline-img {
     filter: brightness(0) invert(1);
 }
 
@@ -838,6 +839,113 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     border: 1px solid var(--color-gold-light);
     border-radius: 2px;
     z-index: -1;
+}
+
+/* ============================================
+   FOUNDER SECTION
+   ============================================ */
+.founder {
+    padding: 8rem 0;
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.founder-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--color-charcoal);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.founder-photo-placeholder svg {
+    width: 60px;
+    height: 60px;
+    opacity: 0.2;
+}
+
+.founder-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.founder .section-label {
+    color: var(--color-gold);
+}
+
+.founder .section-title {
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.founder-role {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-gold-light);
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.founder-text {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--color-cream);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.founder-text em {
+    font-style: italic;
+    color: var(--color-gold-light);
+}
+
+.founder-text strong {
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.founder-certs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.founder-certs li {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-white);
+    background: rgba(166, 124, 82, 0.15);
+    border: 1px solid rgba(166, 124, 82, 0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+.founder-quote {
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+    border-left: 3px solid var(--color-gold);
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--color-gold-light);
+    line-height: 1.6;
 }
 
 /* ============================================
@@ -1698,6 +1806,22 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     .testimonials-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .founder-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .founder-photo-placeholder {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .founder-image img {
+        max-width: 300px;
         margin: 0 auto;
     }
 }
