@@ -244,16 +244,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
             // Honeypot check
             const honeypot = contactForm.querySelector('input[name="_honey"]');
             if (honeypot && honeypot.value !== '') {
-                e.preventDefault();
                 return; // Bot detected
             }
 
             const btn = contactForm.querySelector('button[type="submit"]');
+            const btnText = btn.querySelector('.btn-text');
+            const originalText = btnText.textContent;
+
             btn.classList.add('loading');
             btn.disabled = true;
+
+            const data = {};
+            new FormData(contactForm).forEach(function(value, key) {
+                data[key] = value;
+            });
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(function(response) {
+                btn.classList.remove('loading');
+                if (response.ok) {
+                    btnText.textContent = currentLang === 'el' ? 'Εστάλη!' : 'Message Sent!';
+                    btn.style.background = '#4CAF50';
+                    contactForm.reset();
+                } else {
+                    btnText.textContent = currentLang === 'el' ? 'Σφάλμα!' : 'Error!';
+                    btn.style.background = '#e53935';
+                }
+                setTimeout(function() {
+                    btnText.textContent = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            })
+            .catch(function() {
+                btn.classList.remove('loading');
+                btnText.textContent = currentLang === 'el' ? 'Σφάλμα!' : 'Error!';
+                btn.style.background = '#e53935';
+                setTimeout(function() {
+                    btnText.textContent = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            });
         });
     }
 
