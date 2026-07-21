@@ -868,6 +868,13 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.founder-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .founder-photo-placeholder svg {
     width: 60px;
     height: 60px;
