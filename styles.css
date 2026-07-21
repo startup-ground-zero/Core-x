@@ -788,7 +788,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 .about-text {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--color-primary);
+    color: var(--color-text-light);
     margin-bottom: 1.5rem;
 }
 
