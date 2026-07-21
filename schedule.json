@@ -5,9 +5,9 @@
   },
   "schedule": {
     "Monday": [
-      { "time": "08:00", "classes": ["Pilates", "Strength"] },
+      { "time": "08:00", "classes": ["Pilates"] },
       { "time": "09:00", "classes": ["Strength"] },
-      { "time": "10:00", "classes": ["Pilates", "Strength"] },
+      { "time": "10:00", "classes": ["Pilates"] },
       { "time": "17:00", "classes": ["Pilates", "Strength"] },
       { "time": "18:00", "classes": ["Pilates", "Strength"] },
       { "time": "19:00", "classes": ["Pilates", "Strength"] },
