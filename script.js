@@ -244,54 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
             // Honeypot check
             const honeypot = contactForm.querySelector('input[name="_honey"]');
             if (honeypot && honeypot.value !== '') {
+                e.preventDefault();
                 return; // Bot detected
             }
 
             const btn = contactForm.querySelector('button[type="submit"]');
-            const btnText = btn.querySelector('.btn-text');
-            const originalText = btnText.textContent;
-
             btn.classList.add('loading');
             btn.disabled = true;
-
-            const formData = new FormData(contactForm);
-
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(response => {
-                btn.classList.remove('loading');
-                if (response.ok) {
-                    btnText.textContent = currentLang === 'el' ? 'Εστάλη!' : 'Message Sent!';
-                    btn.style.background = '#4CAF50';
-                    contactForm.reset();
-                } else {
-                    btnText.textContent = currentLang === 'el' ? 'Σφάλμα!' : 'Error!';
-                    btn.style.background = '#e53935';
-                }
-                setTimeout(() => {
-                    btnText.textContent = originalText;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                }, 3000);
-            })
-            .catch(() => {
-                btn.classList.remove('loading');
-                btnText.textContent = currentLang === 'el' ? 'Σφάλμα!' : 'Error!';
-                btn.style.background = '#e53935';
-                setTimeout(() => {
-                    btnText.textContent = originalText;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                }, 3000);
-            });
         });
     }
 
