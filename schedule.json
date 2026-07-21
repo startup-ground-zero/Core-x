@@ -1,17 +1,55 @@
 {
-  "times": ["08:00", "09:00", "10:00", "11:00", "17:00", "18:00", "19:00", "20:00"],
   "days": {
     "en": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     "el": ["Δευτέρα", "Τρίτη", "Τετάρτη", "Πέμπτη", "Παρασκευή", "Σάββατο"]
   },
-  "classes": [
-    [["Pilates", "Cross"], "Cross", "Pilates", "Cross", "Cross", "—"],
-    ["—", "Pilates", "Cross", "Pilates", "Pilates", "—"],
-    ["Cross", "Cross", "Pilates", "Cross", "Cross", "Pilates"],
-    ["—", "—", "—", "—", "—", "Cross"],
-    [["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], "—"],
-    [["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], "—"],
-    [["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], ["Pilates", "Cross"], "—"],
-    [["Pilates", "Cross"], ["Pilates", "Cross"], "—", ["Pilates", "Cross"], ["Pilates", "Cross"], "—"]
-  ]
+  "schedule": {
+    "Monday": [
+      { "time": "08:00", "classes": ["Pilates", "Strength"] },
+      { "time": "10:00", "classes": ["Strength"] },
+      { "time": "17:00", "classes": ["Pilates", "Strength"] },
+      { "time": "18:00", "classes": ["Pilates", "Strength"] },
+      { "time": "19:00", "classes": ["Pilates", "Strength"] },
+      { "time": "20:00", "classes": ["Pilates", "Strength"] }
+    ],
+    "Tuesday": [
+      { "time": "08:00", "classes": ["Strength"] },
+      { "time": "09:00", "classes": ["Pilates"] },
+      { "time": "10:00", "classes": ["Strength"] },
+      { "time": "17:00", "classes": ["Pilates", "Strength"] },
+      { "time": "18:00", "classes": ["Pilates", "Strength"] },
+      { "time": "19:00", "classes": ["Pilates", "Strength"] },
+      { "time": "20:00", "classes": ["Pilates", "Strength"] }
+    ],
+    "Wednesday": [
+      { "time": "08:00", "classes": ["Pilates"] },
+      { "time": "09:00", "classes": ["Strength"] },
+      { "time": "10:00", "classes": ["Pilates"] },
+      { "time": "17:00", "classes": ["Pilates", "Strength"] },
+      { "time": "18:00", "classes": ["Pilates", "Strength"] },
+      { "time": "19:00", "classes": ["Pilates", "Strength"] }
+    ],
+    "Thursday": [
+      { "time": "08:00", "classes": ["Strength"] },
+      { "time": "09:00", "classes": ["Pilates"] },
+      { "time": "10:00", "classes": ["Strength"] },
+      { "time": "17:00", "classes": ["Pilates", "Strength"] },
+      { "time": "18:00", "classes": ["Pilates", "Strength"] },
+      { "time": "19:00", "classes": ["Pilates", "Strength"] },
+      { "time": "20:00", "classes": ["Pilates", "Strength"] }
+    ],
+    "Friday": [
+      { "time": "08:00", "classes": ["Strength"] },
+      { "time": "09:00", "classes": ["Pilates"] },
+      { "time": "10:00", "classes": ["Strength"] },
+      { "time": "17:00", "classes": ["Pilates", "Strength"] },
+      { "time": "18:00", "classes": ["Pilates", "Strength"] },
+      { "time": "19:00", "classes": ["Pilates", "Strength"] },
+      { "time": "20:00", "classes": ["Pilates", "Strength"] }
+    ],
+    "Saturday": [
+      { "time": "10:00", "classes": ["Pilates"] },
+      { "time": "11:00", "classes": ["Strength"] }
+    ]
+  }
 }

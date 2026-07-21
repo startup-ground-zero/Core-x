@@ -154,6 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Brand X image (matches logo) ---
+    const brandXImg = '<img src="PDF_corex_screenshot-removebg-preview.png" alt="CORE X" class="brand-inline-img">';
+
+    function injectBrandX() {
+        document.querySelectorAll('[data-en]').forEach(el => {
+            if (el.textContent.indexOf('CORE X') !== -1 && el.querySelector('.brand-inline-img') === null) {
+                el.innerHTML = el.innerHTML.replace(/CORE X/g, brandXImg);
+            }
+        });
+    }
+
     // --- Language Toggle ---
     const langBtns = document.querySelectorAll('.lang-btn');
     let currentLang = localStorage.getItem('corex-lang') || 'en';
@@ -171,6 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const text = el.getAttribute('data-' + lang);
             if (text) el.textContent = text;
         });
+
+        // Re-inject branded CORE X after text replacement
+        injectBrandX();
 
         // Update placeholders
         document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
@@ -233,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
 
             // Honeypot check
-            const honeypot = contactForm.querySelector('input[name="website"]');
+            const honeypot = contactForm.querySelector('input[name="_honey"]');
             if (honeypot && honeypot.value !== '') {
                 return; // Bot detected
             }
@@ -245,18 +259,39 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('loading');
             btn.disabled = true;
 
-            setTimeout(() => {
-                btn.classList.remove('loading');
-                btnText.textContent = currentLang === 'el' ? 'Εστάλη!' : 'Message Sent!';
-                btn.style.background = '#4CAF50';
-                contactForm.reset();
+            const formData = new FormData(contactForm);
 
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                btn.classList.remove('loading');
+                if (response.ok) {
+                    btnText.textContent = currentLang === 'el' ? 'Εστάλη!' : 'Message Sent!';
+                    btn.style.background = '#4CAF50';
+                    contactForm.reset();
+                } else {
+                    btnText.textContent = currentLang === 'el' ? 'Σφάλμα!' : 'Error!';
+                    btn.style.background = '#e53935';
+                }
                 setTimeout(() => {
                     btnText.textContent = originalText;
                     btn.style.background = '';
                     btn.disabled = false;
                 }, 3000);
-            }, 1500);
+            })
+            .catch(() => {
+                btn.classList.remove('loading');
+                btnText.textContent = currentLang === 'el' ? 'Σφάλμα!' : 'Error!';
+                btn.style.background = '#e53935';
+                setTimeout(() => {
+                    btnText.textContent = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            });
         });
     }
 
