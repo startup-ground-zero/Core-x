@@ -168,6 +168,7 @@ ul {
     vertical-align: middle;
     position: relative;
     top: -0.1em;
+    filter: brightness(0) saturate(100%) invert(52%) sepia(30%) saturate(600%) hue-rotate(350deg) brightness(90%);
 }
 
 .cta-content .brand-inline-img,
