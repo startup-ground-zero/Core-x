@@ -1055,7 +1055,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 .studio-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 250px 250px 250px;
     gap: 1.5rem;
 }
 
@@ -1079,11 +1079,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 
 .gallery-large {
     grid-column: 1 / 2;
-    grid-row: 1 / 3;
-}
-
-.gallery-item:not(.gallery-large) {
-    height: 280px;
+    grid-row: 1 / 4;
 }
 
 .gallery-caption {
