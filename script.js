@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Language Toggle ---
     const langBtns = document.querySelectorAll('.lang-btn');
-    let currentLang = localStorage.getItem('corex-lang') || 'en';
+    let currentLang = localStorage.getItem('corex-lang') || 'el';
 
     function setLanguage(lang) {
         currentLang = lang;
@@ -218,11 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Apply saved language on load
-    if (currentLang !== 'en') {
-        setLanguage(currentLang);
-    } else {
-        updateScheduleLabels(currentLang);
-    }
+    setLanguage(currentLang);
 
     // --- Smooth Scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

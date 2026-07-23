@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://corex.ath/sitemap.xml
+Sitemap: https://www.core-x.gr/sitemap.xml

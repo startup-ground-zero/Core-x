@@ -926,22 +926,16 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 }
 
 .founder-certs {
-    list-style: none;
-    padding: 0;
+    list-style: disc;
+    padding: 0 0 0 1.5rem;
     margin: 0 0 1.5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
 }
 
 .founder-certs li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: var(--color-white);
-    background: rgba(166, 124, 82, 0.15);
-    border: 1px solid rgba(166, 124, 82, 0.3);
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
+    padding: 0.3rem 0;
     letter-spacing: 0.5px;
 }
 
@@ -966,7 +960,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -1762,7 +1756,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 @media (max-width: 1024px) {
     .services-grid {
         grid-template-columns: 1fr;
-        max-width: 500px;
+        max-width: 600px;
         margin: 0 auto;
     }
 
