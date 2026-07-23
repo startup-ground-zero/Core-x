@@ -26,13 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     const langToggle = document.getElementById('lang-toggle');
 
+    let scrollTicking = false;
     const handleScroll = () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-            langToggle.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-            langToggle.classList.remove('scrolled');
+        if (!scrollTicking) {
+            requestAnimationFrame(() => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                    langToggle.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    langToggle.classList.remove('scrolled');
+                }
+                scrollTicking = false;
+            });
+            scrollTicking = true;
         }
     };
     window.addEventListener('scroll', handleScroll);
@@ -129,10 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = lightbox.querySelector('.lightbox-close');
     const galleryItems = document.querySelectorAll('[data-lightbox]');
 
-    galleryItems.forEach(item => {
+    let currentLightboxIndex = 0;
+    const galleryImages = [];
+
+    galleryItems.forEach((item, index) => {
+        galleryImages.push(item.getAttribute('data-lightbox'));
         item.addEventListener('click', () => {
-            const imgSrc = item.getAttribute('data-lightbox');
-            lightboxImg.src = imgSrc;
+            currentLightboxIndex = index;
+            lightboxImg.src = galleryImages[currentLightboxIndex];
             lightbox.classList.add('active');
             document.body.classList.add('no-scroll');
         });
@@ -149,8 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') {
             closeLightbox();
+        } else if (e.key === 'ArrowRight') {
+            currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentLightboxIndex];
+        } else if (e.key === 'ArrowLeft') {
+            currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentLightboxIndex];
         }
     });
 

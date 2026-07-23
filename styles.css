@@ -1437,6 +1437,17 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     line-height: 1.6;
 }
 
+.address-link {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.address-link:hover {
+    color: var(--color-gold);
+    text-decoration: underline;
+}
+
 .contact-form-wrapper {
     background: var(--color-white);
     padding: 3rem;
@@ -1793,6 +1804,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
 
     .studio-gallery {
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         height: auto;
     }
 
@@ -1803,6 +1815,7 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     .gallery-large {
         grid-column: 1 / 3;
         grid-row: auto;
+        height: 300px;
     }
 
     .testimonials-grid {
@@ -2009,6 +2022,19 @@ body .navbar.scrolled + .lang-toggle .lang-btn,
     .lang-toggle {
         right: 4rem;
         top: 1.5rem;
+    }
+
+    .studio-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-large {
+        grid-column: auto;
+        height: 280px;
+    }
+
+    .gallery-item {
+        height: 220px;
     }
 }
 
