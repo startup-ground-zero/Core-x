@@ -65,6 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Lazy-load hero slide backgrounds after page load
+    slides.forEach(slide => {
+        const bg = slide.getAttribute('data-bg');
+        if (bg) {
+            slide.style.backgroundImage = "url('" + bg + "')";
+        }
+    });
+
     if (slides.length > 1 && !prefersReducedMotion) {
         setInterval(() => {
             slides[currentSlide].classList.remove('active');
